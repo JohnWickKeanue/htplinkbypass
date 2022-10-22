@@ -5,10 +5,11 @@ from urllib.parse import urlparse
 from bs4 import BeautifulSoup
 from requests import get
 
-url = "https://htpmovies.art/go.php?url=M3hGellLam5SSmI0Q3FHU01sRFI1UWtha2YrOWpRWGMwcEtWU1F2NXkyd3ljeVFxM2ZubVlpczUxMXlHM3hqSg=="
+url = "https://htpmovies.art/exit.php?url=M3hGellLam5SSmI0Q3FHU01sRFI1UWtha2YrOWpRWGMwcEtWU1F2NXkyd3ljeVFxM2ZubVlpczUxMXlHM3hqSg=="
 
 def htp(url):
-    download = get(url, stream=True, allow_redirects=False) 
+    yurl = url.replace("htpmovies.art/exit", "htpmovies.art/go")
+    download = get(yurl, stream=True, allow_redirects=False) 
     xurl =download.headers["location"]
     client = cloudscraper.create_scraper(allow_brotli=False)
     p = urlparse(xurl)

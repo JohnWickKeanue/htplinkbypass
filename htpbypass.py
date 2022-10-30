@@ -9,8 +9,8 @@ url = "https://htpmovies.lol/exit.php?url=M3hGellLam5SSmI0Q3FHU01sRFI1UWtha2YrOW
 def htp(url):
     client = cloudscraper.create_scraper(allow_brotli=False)
     r = client.get(url, allow_redirects=True).text
-    test= r.replace('<script>window.location.replace("','')
-    url = test.replace('")</script>','')
+    j = r.replace('<script>window.location.replace("','')
+    url = j.replace('")</script>','')
     param = url.split("/")[-1]
     DOMAIN = "https://go.kinemaster.cc"
     final_url = f"{DOMAIN}/{param}"

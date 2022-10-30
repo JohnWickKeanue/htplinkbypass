@@ -1,3 +1,4 @@
+
 import time
 import cloudscraper
 from urllib.parse import urlparse
@@ -9,8 +10,9 @@ url = "https://htpmovies.lol/exit.php?url=M3hGellLam5SSmI0Q3FHU01sRFI1UWtha2YrOW
 def htp(url):
     client = cloudscraper.create_scraper(allow_brotli=False)
     r = client.get(url, allow_redirects=True).text
-    j = r.replace('<script>window.location.replace("','')
-    url = j.replace('")</script>','')
+    j = r.split('("')[-1]
+    url = j.split('")')[0]
+    print(url)
     param = url.split("/")[-1]
     DOMAIN = "https://go.kinemaster.cc"
     final_url = f"{DOMAIN}/{param}"

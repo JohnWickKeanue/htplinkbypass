@@ -7,9 +7,8 @@ from requests import get, head
 url = "https://htpmovies.lol/exit.php?url=M3hGellLam5SSmI0Q3FHU01sRFI1UWtha2YrOWpRWGMwcEtWU1F2NXkyd3ljeVFxM2ZubVlpczUxMXlHM3hqSg=="
 
 def htp(url):
-    if url.startswith("https://htpmovies.lol/"):
-        r = head(url, allow_redirects=True)
-        url = r.url
+    r = head(url, allow_redirects=True)
+    url = r.url
     client = cloudscraper.create_scraper(allow_brotli=False)
     param = url.split('?token=')[-1]
     DOMAIN = "https://go.kinemaster.cc"

@@ -12,7 +12,6 @@ def htp(url):
     r = client.get(url, allow_redirects=True).text
     j = r.split('("')[-1]
     url = j.split('")')[0]
-    print(url)
     param = url.split("/")[-1]
     DOMAIN = "https://go.kinemaster.cc"
     final_url = f"{DOMAIN}/{param}"

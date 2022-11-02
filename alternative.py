@@ -10,7 +10,7 @@ def htp(url):
     client = cloudscraper.create_scraper(allow_brotli=False)
     j = url.split('?token=')[-1]
     param = j.replace('&m=1','')
-    DOMAIN = "https://go.kinemaster.cc"
+    DOMAIN = "https://go.theforyou.in"
     final_url = f"{DOMAIN}/{param}"
     resp = client.get(final_url)
     soup = BeautifulSoup(resp.content, "html.parser")    

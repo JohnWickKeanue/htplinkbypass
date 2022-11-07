@@ -5,7 +5,7 @@ from urllib.parse import urlparse
 from bs4 import BeautifulSoup
 from requests import get, head
 
-url = "https://htpmovies.lol/exit.php?url=M3hGellLam5SSmI0Q3FHU01sRFI1UWtha2YrOWpRWGMwcEtWU1F2NXkyd3ljeVFxM2ZubVlpczUxMXlHM3hqSg=="
+url = "https://htpmovies.sbs/exit.php?url=M3hGellLam5SSmI0Q3FHU01sRFI1V25YNEllQUFlWXM0bGM3dzhVYTVaUGtoaENORlYxbmVUZGh4d0NmeHVCVw=="
 
 def htp(url):
     client = cloudscraper.create_scraper(allow_brotli=False)

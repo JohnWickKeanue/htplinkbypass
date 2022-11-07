@@ -1,9 +1,8 @@
 
 import time
 import cloudscraper
-from urllib.parse import urlparse
 from bs4 import BeautifulSoup
-from requests import get, head
+
 
 url = "https://htpmovies.sbs/exit.php?url=M3hGellLam5SSmI0Q3FHU01sRFI1V25YNEllQUFlWXM0bGM3dzhVYTVaUGtoaENORlYxbmVUZGh4d0NmeHVCVw=="
 
